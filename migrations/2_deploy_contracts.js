@@ -1,5 +1,5 @@
-const Winner = artifacts.require("Winner")
+const Owned = artifacts.require("Owned")
 
 module.exports = deployer => {
-  deployer.deploy(Winner)
+  deployer.deploy(Owned)
 }

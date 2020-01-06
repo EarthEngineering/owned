@@ -1,10 +1,10 @@
-const Winner = artifacts.require("Winner")
+const Owned = artifacts.require("Owned")
 
-contract("Winner", accounts => {
+contract("Owned", accounts => {
   it("should win", async () => {
-    const winnerInstance = await Winner.deployed()
-    const win = await winnerInstance.winning()
+    const ownedInstance = await Owned.deployed()
+    const owned = await ownedInstance.winning()
 
-    assert.equal(win, "Winning", "should be 'Winning'")
+    assert.equal(owned, "Owned", "should be 'Owned'")
   })
 })
