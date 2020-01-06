@@ -7,4 +7,11 @@ contract("Owned", accounts => {
 
     assert.equal(owned, "Owned", "should be 'Owned'")
   })
+
+  it("should return owner", async () => {
+    const ownedInstance = await Owned.deployed()
+    const owner = await ownedInstance.owner()
+
+    assert.equal(owner, accounts[0], "should be 'Owned'")
+  })
 })
